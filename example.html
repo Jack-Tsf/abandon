@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>中小企业案例库</title>
+    <style>
+        body {
+            background-image: url("image/样品例子.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: blue;
+            text-align: left;
+            font-size: 30px;
+            margin-top: 200px;
+        }
+
+        /* 添加的登录按钮、注册按钮和中英文选项样式 */
+        #loginButtons {
+            position: absolute;
+            top: 10px;
+            right: 250px;
+        }
+
+        #loginButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #registerButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #languageOptions {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+            color: white;
+        }
+        #languageOptions a {
+            color: white; /* 修改字体颜色为白色 */
+        }
+        .product-container {
+            width: 1800px;
+            margin: 0 auto;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .product {
+            display: inline-block;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 400px;
+            height: 400px;
+            transition: transform 0.3s;
+        }
+
+        .product:hover img {
+            transform: scale(1.1);
+        }
+
+        .product .button-container {
+            margin-top: 20px;
+            background-color: #87CEEB;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .product .button-container button {
+            background-color: transparent; /* 设置按钮文字的背景色为透明 */
+            color: white; /* 设置按钮文字颜色 */
+            border: none;
+        }
+    }
+    </style>
+</head>
+<body>
+    <h1>中小企业数智分析案例</h1>
+    
+
+    <!-- 登录按钮、注册按钮和中英文选项 -->
+    <div id="loginButtons">
+        <button id="loginButton" onclick="window.location.href='login.html'">登录</button>
+        <button id="registerButton">注册</button>
+    </div>
+    <div class="product-container">
+        <div class="product">
+            <img src="image/尚德.jpg" alt="产品1" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+            <button id="shangpin" onclick="">尚德壹品（设计）</button>
+<!--                 <button onclick="www.baidu.com">尚德壹品（设计）</button> -->
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="image/冠军.jpg" alt="产品2" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品2')">冠君（广告）</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image/乐创.jpg" alt="产品1" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品1')">乐创（咨询）</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="image/换新.png" alt="产品2" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品2')">焕新（皮肤管理）</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image/韦德.png" alt="产品1" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品1')">维得（服饰）</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="image/麻吉.jpg" alt="产品2" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品2')">玛古（文旅）</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image/一农.jpg" alt="产品1" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品1')">一品（农产品）</button>
+            </div>
+        </div>
+        <div class="product">
+            <img src="image/心愿.jpg" alt="产品1" onmouseover="stopScroll()" onmouseout="startScroll()">
+            <div class="button-container">
+                <button onclick="showProductDetails('产品1')">鑫源（制造）</button>
+            </div>
+        </div>
+        <!-- 添加更多产品 -->
+    </div>
+
+    <script>
+        var scrollInterval;
+
+        function startScroll() {
+            scrollInterval = setInterval(function () {
+                var container = document.querySelector('.product-container');
+                container.scrollLeft += 1; // 每次滚动的像素值
+            }, 10); // 滚动间隔时间
+        }
+
+        function stopScroll() {
+            clearInterval(scrollInterval);
+        }
+
+        function showProductDetails(productName) {
+            // 在此处执行跳转到产品详细信息页面的操作
+            // 可以使用JavaScript中的window.location.href = "详细信息页面的URL";
+            alert('进入产品 "' + productName + '" 的详细信息页面');
+        }
+    </script>
+     <div id="languageOptions">
+        <a href="#" style="color: white;">English</a> | <a href="#" style="color: white;">中文</a>
+    </div>
+<footer style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+    <p>版权所有 © 2023 数智平台服务中心 联系我们：shuzipingtai@outlook.com</p>
+</footer>
+</body>
+</html>

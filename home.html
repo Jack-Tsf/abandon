@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>大数据财务数智综合教学平台</title>
+    <style>
+        body {
+            background-image: url("image/主页2.jpg");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 80px;
+            margin-top: 120px;
+        }
+        span {
+            color: orange;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: 250px;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .logo {
+            display: inline-block;
+            margin: 20px;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 400px;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 10px;
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 添加的登录按钮、注册按钮和中英文选项样式 */
+        #loginButtons {
+            position: absolute;
+            top: 10px;
+            right: 250px;
+        }
+
+        #loginButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        #registerButton {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #languageOptions {
+            position: absolute;
+            top: 20px;
+            right: 120px;
+            color: white;
+        }
+        #languageOptions a {
+            color: white; /* 修改字体颜色为白色 */
+        }
+    </style>
+</head>
+<body>
+    <h1><span>大数据</span>财务数智综合教学平台</h1>
+    
+    <div class="logo-container">
+        <div class="logo">
+            <img src="image/财务管理案例库.jpg" alt="Logo 1">
+            <div class="link">
+                <a href="example.html" target="_blank">进入案例库</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="image/大数据处理平台.png" alt="Logo 2">
+            <div class="link">
+                <a href="https://powerbi.microsoft.com" target="_blank">进入Power BI</a>
+            </div>
+        </div>
+        <div class="logo">
+            <img src="image/课程管理平台.png" alt="Logo 3">
+            <div class="link">
+                <a href="https://fanya.chaoxing.com/portal" target="_blank">进入泛雅平台</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 登录按钮、注册按钮和中英文选项 -->
+    <div id="loginButtons">
+        <button id="loginButton" onclick="window.location.href='login.html'">登录</button>
+        <button id="registerButton">注册</button>
+    </div>
+  
+    <div id="languageOptions">
+        <a href="#" style="color: white;">English</a> | <a href="#" style="color: white;">中文</a>
+    </div>
+	<!-- 网页内容 -->
+<footer style="text-align: center; position: fixed; bottom: 0; width: 100%;">
+    <p>版权所有 © 2023 数智平台服务中心 联系我们：shuzipingtai@outlook.com</p>
+</footer>
+</body>
+</html>
